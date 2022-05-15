@@ -33,6 +33,7 @@ class _SplashScreenState extends State<SplashScreen> {
             textAlign: TextAlign.center,
             style: TextStyle(
               fontSize: 40.0,
+              fontFamily: "Roboto",
               fontWeight: FontWeight.bold,
             ),
           ),
