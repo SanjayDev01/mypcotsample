@@ -134,38 +134,74 @@ class _HomeScreenState extends State<HomeScreen> {
                 ],
               ),
               const SizedBox(
-                height: 35,
+                height: 25,
               ),
-              Padding(
-                padding: const EdgeInsets.only(
-                  left: 18.0,
-                  bottom: 7,
-                ),
-                child: Text(
-                  "Welcome, Mypcot !!",
-                  style: TextStyle(
-                      fontSize: 22,
-                      fontFamily: "Roboto,",
-                      fontWeight: FontWeight.w500,
-                      color: HexColor("#5F7096")),
-                ),
-              ),
-              Padding(
-                padding: const EdgeInsets.only(
-                  left: 18.0,
-                  bottom: 7,
-                ),
-                child: Text(
-                  "here is your dashboard....",
-                  style: TextStyle(
-                      fontSize: 18,
-                      fontFamily: "Roboto,",
-                      fontWeight: FontWeight.w500,
-                      color: HexColor("#7A869A")),
-                ),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Padding(
+                        padding: const EdgeInsets.only(
+                          left: 18.0,
+                          bottom: 7,
+                        ),
+                        child: Text(
+                          "Welcome, Mypcot !!",
+                          style: TextStyle(
+                              fontSize: 22,
+                              fontFamily: "Roboto,",
+                              fontWeight: FontWeight.w500,
+                              color: HexColor("#5F7096")),
+                        ),
+                      ),
+                      Padding(
+                        padding: const EdgeInsets.only(
+                          left: 18.0,
+                          bottom: 7,
+                        ),
+                        child: Text(
+                          "here is your dashboard....",
+                          style: TextStyle(
+                              fontSize: 18,
+                              fontFamily: "Roboto,",
+                              fontWeight: FontWeight.w500,
+                              color: HexColor("#7A869A")),
+                        ),
+                      ),
+                    ],
+                  ),
+                  Padding(
+                    padding: const EdgeInsets.only(right: 18),
+                    child: Container(
+                      width: 62,
+                      height: 62,
+                      alignment: Alignment.center,
+                      decoration: BoxDecoration(
+                        color: Colors.white,
+                        shape: BoxShape.circle,
+                        boxShadow: [
+                          BoxShadow(
+                            color: Colors.grey.withOpacity(0.3),
+                            spreadRadius: 3,
+                            blurRadius: 3,
+                            offset: const Offset(
+                                0, 3), // changes position of shadow
+                          ),
+                        ],
+                      ),
+                      child: const Image(
+                        width: 25,
+                        height: 25,
+                        image: Svg("assets/icons/Group 918.svg"),
+                      ),
+                    ),
+                  ),
+                ],
               ),
               const SizedBox(
-                height: 45,
+                height: 35,
               ),
               Padding(
                 padding: const EdgeInsets.symmetric(horizontal: 28.0),
@@ -199,6 +235,360 @@ class _HomeScreenState extends State<HomeScreen> {
               ),
               const SizedBox(
                 height: 30,
+              ),
+              Row(
+                children: [
+                  Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Padding(
+                        padding: const EdgeInsets.only(
+                          left: 18.0,
+                        ),
+                        child: Text(
+                          "January, 23 2021",
+                          style: TextStyle(
+                              color: HexColor("5F7096"), fontSize: 14),
+                        ),
+                      ),
+                      Padding(
+                        padding: const EdgeInsets.only(
+                          left: 18.0,
+                        ),
+                        child: Text("Today",
+                            style: TextStyle(
+                                color: HexColor("#2C3D63"), fontSize: 24)),
+                      ),
+                    ],
+                  ),
+                  const SizedBox(
+                    width: 17,
+                  ),
+                  Container(
+                    width: 120,
+                    height: 32,
+                    alignment: Alignment.center,
+                    decoration: BoxDecoration(
+                      color: Colors.white,
+                      borderRadius: const BorderRadius.all(Radius.circular(16)),
+                      boxShadow: [
+                        BoxShadow(
+                          color: Colors.grey.withOpacity(0.3),
+                          spreadRadius: 3,
+                          blurRadius: 3,
+                          offset:
+                              const Offset(0, 3), // changes position of shadow
+                        ),
+                      ],
+                    ),
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        Text(
+                          "TIMELINE",
+                          style: TextStyle(
+                              color: HexColor("#2C3D63"), fontSize: 14),
+                        ),
+                        Icon(
+                          Icons.arrow_drop_down,
+                          color: HexColor("#5F7096"),
+                          size: 30,
+                        )
+                      ],
+                    ),
+                  ),
+                  const SizedBox(
+                    width: 17,
+                  ),
+                  Container(
+                    width: 120,
+                    height: 32,
+                    alignment: Alignment.center,
+                    decoration: BoxDecoration(
+                      color: Colors.white,
+                      borderRadius: const BorderRadius.all(Radius.circular(16)),
+                      boxShadow: [
+                        BoxShadow(
+                          color: Colors.grey.withOpacity(0.3),
+                          spreadRadius: 3,
+                          blurRadius: 3,
+                          offset:
+                              const Offset(0, 3), // changes position of shadow
+                        ),
+                      ],
+                    ),
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        const Image(
+                          image: Svg("assets/icons/Group 914.svg"),
+                          width: 20,
+                        ),
+                        const SizedBox(
+                          width: 5,
+                        ),
+                        Text(
+                          "JAN, 2021",
+                          style: TextStyle(
+                              color: HexColor("#2C3D63"), fontSize: 14),
+                        ),
+                      ],
+                    ),
+                  ),
+                ],
+              ),
+              const SizedBox(
+                height: 26,
+              ),
+              SizedBox(
+                height: 64,
+                child: ListView(
+                  scrollDirection: Axis.horizontal,
+                  children: [
+                    const SizedBox(width: 18),
+                    Column(
+                      children: [
+                        Text(
+                          "MON",
+                          style: TextStyle(
+                              color: HexColor("#C5D6FC"),
+                              fontSize: 16,
+                              fontFamily: "Roboto,"),
+                        ),
+                        Text(
+                          "20",
+                          style: TextStyle(
+                              color: HexColor("#2C3D63"),
+                              fontSize: 18,
+                              fontFamily: "Roboto,"),
+                        )
+                      ],
+                    ),
+                    const SizedBox(width: 26),
+                    Column(
+                      children: [
+                        Text(
+                          "TUE",
+                          style: TextStyle(
+                              color: HexColor("#C5D6FC"),
+                              fontSize: 16,
+                              fontFamily: "Roboto,"),
+                        ),
+                        Text(
+                          "21",
+                          style: TextStyle(
+                              color: HexColor("#2C3D63"),
+                              fontSize: 18,
+                              fontFamily: "Roboto,"),
+                        )
+                      ],
+                    ),
+                    const SizedBox(width: 26),
+                    Column(
+                      children: [
+                        Text(
+                          "WED",
+                          style: TextStyle(
+                              color: HexColor("#C5D6FC"),
+                              fontSize: 16,
+                              fontFamily: "Roboto,"),
+                        ),
+                        Text(
+                          "22",
+                          style: TextStyle(
+                              color: HexColor("#2C3D63"),
+                              fontSize: 18,
+                              fontFamily: "Roboto,"),
+                        )
+                      ],
+                    ),
+                    const SizedBox(width: 26),
+                    Column(
+                      children: [
+                        Text(
+                          "THU",
+                          style: TextStyle(
+                              color: HexColor("#008080"),
+                              fontSize: 16,
+                              fontFamily: "Roboto,"),
+                        ),
+                        Text(
+                          "23",
+                          style: TextStyle(
+                              color: HexColor("#008080"),
+                              fontSize: 18,
+                              fontFamily: "Roboto,"),
+                        ),
+                        const SizedBox(
+                          height: 6,
+                        ),
+                        Container(
+                          width: 6,
+                          height: 6,
+                          decoration: BoxDecoration(
+                              color: HexColor("#008080"),
+                              shape: BoxShape.circle),
+                        )
+                      ],
+                    ),
+                    const SizedBox(width: 26),
+                    Column(
+                      children: [
+                        Text(
+                          "FRI",
+                          style: TextStyle(
+                              color: HexColor("#C5D6FC"),
+                              fontSize: 16,
+                              fontFamily: "Roboto,"),
+                        ),
+                        Text(
+                          "24",
+                          style: TextStyle(
+                              color: HexColor("#2C3D63"),
+                              fontSize: 18,
+                              fontFamily: "Roboto,"),
+                        )
+                      ],
+                    ),
+                    const SizedBox(width: 26),
+                    Column(
+                      children: [
+                        Text(
+                          "SAT",
+                          style: TextStyle(
+                              color: HexColor("#C5D6FC"),
+                              fontSize: 16,
+                              fontFamily: "Roboto,"),
+                        ),
+                        Text(
+                          "25",
+                          style: TextStyle(
+                              color: HexColor("#2C3D63"),
+                              fontSize: 18,
+                              fontFamily: "Roboto,"),
+                        )
+                      ],
+                    ),
+                    const SizedBox(width: 26),
+                    Column(
+                      children: [
+                        Text(
+                          "SUN",
+                          style: TextStyle(
+                              color: HexColor("#C5D6FC"),
+                              fontSize: 16,
+                              fontFamily: "Roboto,"),
+                        ),
+                        Text(
+                          "26",
+                          style: TextStyle(
+                              color: HexColor("#2C3D63"),
+                              fontSize: 18,
+                              fontFamily: "Roboto,"),
+                        )
+                      ],
+                    )
+                  ],
+                ),
+              ),
+              const SizedBox(
+                height: 30,
+              ),
+              Padding(
+                padding: const EdgeInsets.symmetric(horizontal: 18.0),
+                child: Container(
+                  width: 388,
+                  height: 180,
+                  decoration: BoxDecoration(
+                    color: Colors.white,
+                    borderRadius: const BorderRadius.all(Radius.circular(25)),
+                    boxShadow: [
+                      BoxShadow(
+                        color: Colors.grey.withOpacity(0.3),
+                        spreadRadius: 3,
+                        blurRadius: 3,
+                        offset:
+                            const Offset(0, 3), // changes position of shadow
+                      ),
+                    ],
+                  ),
+                  child: Row(
+                    children: [
+                      Column(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          Padding(
+                            padding: const EdgeInsets.only(
+                                left: 40, bottom: 15, top: 15),
+                            child: Text(
+                              "New order created",
+                              style: TextStyle(
+                                fontSize: 20,
+                                fontFamily: "Roboto,",
+                                fontWeight: FontWeight.w400,
+                                color: HexColor("#5F7096"),
+                              ),
+                            ),
+                          ),
+                          Padding(
+                            padding:
+                                const EdgeInsets.only(left: 40, bottom: 20),
+                            child: Text(
+                              "New Order created with Order",
+                              style: TextStyle(
+                                fontSize: 15,
+                                fontFamily: "Roboto,",
+                                fontWeight: FontWeight.w400,
+                                color: HexColor("#4C4C4C"),
+                              ),
+                            ),
+                          ),
+                          Padding(
+                            padding:
+                                const EdgeInsets.only(left: 40, bottom: 10),
+                            child: Text(
+                              "09:00 AM",
+                              style: TextStyle(
+                                fontSize: 15,
+                                fontFamily: "Roboto,",
+                                fontWeight: FontWeight.w400,
+                                color: HexColor("#FF7742"),
+                              ),
+                            ),
+                          ),
+                          Padding(
+                            padding:
+                                const EdgeInsets.only(left: 40, bottom: 10),
+                            child: Icon(Icons.arrow_forward,
+                                color: HexColor("#FF7742"), size: 25),
+                          ),
+                        ],
+                      ),
+                      Padding(
+                        padding: const EdgeInsets.only(left: 30),
+                        child: Container(
+                          width: 90,
+                          height: 90,
+                          alignment: Alignment.center,
+                          decoration: BoxDecoration(
+                            color: HexColor("#FF7742"),
+                            shape: BoxShape.circle,
+                          ),
+                          child: const Image(
+                            image: Svg("assets/icons/Group 900.svg"),
+                            width: 65,
+                            height: 65,
+                            color: Colors.white,
+                          ),
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+              ),
+              const SizedBox(
+                height: 20,
               ),
             ],
           ),
